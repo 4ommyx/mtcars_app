@@ -1,6 +1,6 @@
 import streamlit as st
-import joblib
-import numpy as np
+# import joblib
+# import numpy as np
 st.title("🚗 Car Prediction App")
 
 # # Load the saved model
