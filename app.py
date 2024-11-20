@@ -111,12 +111,10 @@ selection = col6.selectbox(
 
 if st.button("🔮 Predict"):
     # st.markdown([feature_wt, feature_cyl, feature_disp, feature_hp, feature_drat, options.index(selection)])
-    try:
         features = np.array([[feature_wt, feature_cyl, feature_disp, feature_hp, feature_drat, options.index(selection)]])
         prediction = model.predict(features)
         st.success(f"🎉 The predicted value is: **{prediction[0][0].round(3)}**")
-    except Exception as e:
-        st.error(f"Error occurred: {str(e)}")
+
 
 
 # Add a footer with credits
