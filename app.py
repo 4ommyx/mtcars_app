@@ -52,13 +52,13 @@ st.markdown("""
 """)
 
 # Input Features
-st.write("### Enter Features:")
+st.write("### Enter Features :")
 col1, col2 = st.columns(2)
 col3, col4 = st.columns(2)
 col5, col6 = st.columns(2)
 
 feature_wt = col1.number_input(
-    label="Feature 1 (Weight):", 
+    label="Feature 1 (Weight) :", 
     min_value=1.0, 
     max_value=6.0, 
     value=1.0, 
@@ -68,7 +68,7 @@ feature_wt = col1.number_input(
     label_visibility="visible"
 )
 feature_cyl = col5.slider(
-    label="Feature 5 (Cylinders):", 
+    label="Feature 5 (Cylinders) :", 
     min_value=4, 
     max_value=8, 
     value=6, 
@@ -76,7 +76,7 @@ feature_cyl = col5.slider(
     help="Choose the number of cylinders."
 )
 feature_disp = col2.number_input(
-    label="Feature 2 (Displacement):", 
+    label="Feature 2 (Displacement) :", 
     min_value=50, 
     max_value=500, 
     value=50, 
@@ -85,7 +85,7 @@ feature_disp = col2.number_input(
     help="Enter the engine displacement (cubic inches)."
 )
 feature_hp = col3.number_input(
-    label="Feature 3 (Horsepower):", 
+    label="Feature 3 (Horsepower) :", 
     min_value=50, 
     max_value=450, 
     value=50, 
@@ -94,7 +94,7 @@ feature_hp = col3.number_input(
     help="Enter the engine horsepower."
 )
 feature_drat = col4.number_input(
-    label="Feature 4 (Driveshaft Ratio):", 
+    label="Feature 4 (Driveshaft Ratio) :", 
     min_value=2.0, 
     max_value=5.0, 
     value=2.0, 
@@ -104,17 +104,19 @@ feature_drat = col4.number_input(
 )
 options = ["V-shaped engine : 0", "Straight engine : 1"]
 selection = col6.selectbox(
-    label="Feature 6 (Engine Shape):",
+    label="Feature 6 (Engine Shape) :",
     options=options,
     help="Choose the engine shape."
 )
 
 if st.button("🔮 Predict"):
     # st.markdown([feature_wt, feature_cyl, feature_disp, feature_hp, feature_drat, options.index(selection)])
+    try:
         features = np.array([[feature_wt, feature_cyl, feature_disp, feature_hp, feature_drat, options.index(selection)]])
         prediction = model.predict(features)
         st.success(f"🎉 The predicted value is: **{prediction[0][0].round(3)}**")
-
+    except Exception as e:
+        st.error(f"Error occurred: {str(e)}")
 
 
 # Add a footer with credits
