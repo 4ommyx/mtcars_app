@@ -3,7 +3,7 @@ import joblib
 import numpy as np
 
 # Load the saved model
-model = joblib.load('mtcar_linear_reg.pkl')
+model = joblib.load('mtcars_linear_reg.pkl')
 
 st.set_page_config(
     page_title="Car Prediction App",
