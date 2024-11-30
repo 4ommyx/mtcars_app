@@ -40,7 +40,6 @@ Describes the engine shape:
 - `0`: V-shaped engine  
 - `1`: Straight engine
 
----
 
 ## Additional Resources
 - **Documentation**: [MT Cars Dataset Project using Linear Regression](https://medium.com/@4ommyx/mtcars-dataset-project-using-linear-regression-model-422dd17ec670)  
