@@ -3,13 +3,13 @@
 Welcome to the car prediction app!  
 Enter the required features below, and click **Predict** to see the result.
 
----
+
 
 ## Model Performance
 - **Mean Squared Error**: 6.251  
 - **R² Score**: 0.835  
 
----
+
 
 ## Description of Features in the `mtcars` Dataset
 
@@ -39,3 +39,9 @@ This affects the car's acceleration and fuel economy.
 Describes the engine shape:  
 - `0`: V-shaped engine  
 - `1`: Straight engine
+
+---
+
+## Additional Resources
+- **Documentation**: [MT Cars Dataset Project using Linear Regression](https://medium.com/@4ommyx/mtcars-dataset-project-using-linear-regression-model-422dd17ec670)  
+- **App Link**: [MT Cars Prediction App](https://mtcarsapp-4ommyx.streamlit.app/)
